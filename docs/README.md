@@ -1,19 +1,28 @@
 # Homomorphic Encryption: The Power of Secure Data Processing
 <sub>by John Narte</sub>
 <br/><br/>
-
+## Disclaimer: WIP contents subject to change
+<br/><br/>
 ![Book logo](assets/blog-test-img.jpg)
 <br/><br/>
 ## Introduction
 Homomorphic Encryption is a cryptographic technique that enables complex computations to be performed on encrypted data without the need for decryption.
+In today's digital age, data is quite literally the lifeblood of businesses and organizations worldwide.
+The more data we generate and share, the more risks there are to data privacy and security
 With homomorphic encryption, organizations can securely store, process, and exchange data while preserving privacy and security, such as in the case of customer data or personal data.
-This technology holds significance in fields that require protection of sensitive data such as healthcare, finance, and data privacy i.e. cloud services.
+This blog will delve deeper into homomorphic encryption, providing and in-depth understanding of its principles, different types, real-world applications, examples, and challenges of its implementation
 <br/><br/>
-## First Part
+## Principles
 Next Line
 <br/><br/>
-## Second Part
+## Types
 Another Line
 <br/><br/>
-## Third Part
+## Applications
 More Lines
+## Examples
+Oh look more lines
+## Challenges
+And theres more lines
+## Conclusion
+Last Line
