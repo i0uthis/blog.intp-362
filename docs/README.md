@@ -1,4 +1,4 @@
-# Homomorphic Encryption and its uses in the current technological landscape
+# Homomorphic Encryption: The Power of Secure Data Processing
 <sub>by John Narte</sub>
 <br/><br/>
 ![Book logo](assets/blog-test-img.jpg)
