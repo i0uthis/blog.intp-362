@@ -6,3 +6,5 @@ With homomorphic encryption, organizations can securely store, process, and exch
 This technology holds significance in fields that require protection of sensitive data such as healthcare, finance, and data privacy i.e. cloud services.
 <br/><br/>
 Next Line
+<br/><br/>
+Another Line
