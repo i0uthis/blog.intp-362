@@ -20,9 +20,12 @@ Another Line
 <br/><br/>
 ## Applications
 More Lines
+<br/><br/>
 ## Examples
 Oh look more lines
+<br/><br/>
 ## Challenges
 And theres more lines
+<br/><br/>
 ## Conclusion
 Last Line
