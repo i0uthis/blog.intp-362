@@ -31,7 +31,7 @@ The FHE algorithm can be used in many different industries and can even be bette
 - Secure Cloud Computing: could be used to allow businesses to store and process sensitive data on the cloud in a way that does not reveal the data to the cloud provider.
 - Secure Search: could be used to allow organizations to securely search through a large database of sensitive information without revealing the actual contents of the database.
 - Secure Machine Learning: could be used to allow organizations to train machine learning models on sensitive data without revealing the data to the model developers.
-- Secure e-commerce: could be used to allow organizations to securely process sensitive information such as credit card numbers and personal data during transactions.
+- Secure e-commerce: could be used to allow organizations to securely process sensitive information such as credit card numbers and personal data during transactions.-
 <br/><br/>
 Basically, anything that has something to do with “sensitive” data, homomorphic encryption can be used on it.
 <br/><br/>
