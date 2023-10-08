@@ -3,7 +3,7 @@
 <br/><br/>
 ## Disclaimer: WIP contents subject to change
 <br/><br/>
-Image here
+![image](/docs/assets/Homo-Encryption-Feature.png)
 <br/><br/>
 ## Introduction
 In today's digital age, data is quite literally the lifeblood of businesses and organizations worldwide. The more data we generate and share, the more risks there are to data privacy and security. Organizations require a way to secure the confidentiality of their data. They can use encryption methods that will allow them to encrypt the data and so long as they have the decryption key, they are able to read said data. Which is great but once the data is decrypted the confidentiality of the data disappears because whoever has the decryption key has the means to look into the data. 
@@ -28,10 +28,10 @@ The final goal of Homomorphic Encryption. A fully homomorphic encryption algorit
 <br/><br/>
 ## Use Cases of Fully Homomorphic Encryption
 The FHE algorithm can be used in many different industries and can even be better than some of the more common encryption types. Here are some use cases of FHE:
-1. Secure Cloud Computing: could be used to allow businesses to store and process sensitive data on the cloud in a way that does not reveal the data to the cloud provider.
-2. Secure Search: could be used to allow organizations to securely search through a large database of sensitive information without revealing the actual contents of the database.
-3. Secure Machine Learning: could be used to allow organizations to train machine learning models on sensitive data without revealing the data to the model developers.
-4. Secure e-commerce: could be used to allow organizations to securely process sensitive information such as credit card numbers and personal data during transactions.
+Secure Cloud Computing: could be used to allow businesses to store and process sensitive data on the cloud in a way that does not reveal the data to the cloud provider.
+Secure Search: could be used to allow organizations to securely search through a large database of sensitive information without revealing the actual contents of the database.
+Secure Machine Learning: could be used to allow organizations to train machine learning models on sensitive data without revealing the data to the model developers.
+Secure e-commerce: could be used to allow organizations to securely process sensitive information such as credit card numbers and personal data during transactions.
 <br/><br/>
 Basically, anything that has something to do with “sensitive” data, homomorphic encryption can be used on it.
 <br/><br/>
