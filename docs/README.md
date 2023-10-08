@@ -3,7 +3,7 @@
 <br/><br/>
 ## Disclaimer: WIP contents subject to change
 <br/><br/>
-![image](/assets/Homo-Encryption-Feature.png)
+![image](/docs/assets/Homo-Encryption-Feature.png)
 <br/><br/>
 ## Introduction
 In today's digital age, data is quite literally the lifeblood of businesses and organizations worldwide. The more data we generate and share, the more risks there are to data privacy and security. Organizations require a way to secure the confidentiality of their data. They can use encryption methods that will allow them to encrypt the data and so long as they have the decryption key, they are able to read said data. Which is great but once the data is decrypted the confidentiality of the data disappears because whoever has the decryption key has the means to look into the data. 
