@@ -16,7 +16,8 @@ The goal of Homomorphic Encryption is to enable an infinite number of additions 
 ### Partially Homomorphic Encryption (PHE)
 This type allows a defined operation, either addition or multiplication, to be performed an infinite number of times. For example, a particular algorithm may be additively homomorphic, meaning adding two ciphertexts together produces the same result as encrypting the sum of the two plaintexts.
 <br/><br/>
-![equation](/docs/assets/basic-equation.png)
+![equation](/docs/assets/basic-equation.png)\
+<sub>This shows a basic equation of the example above. C1+C2 represents the addition of two ciphertexts, and E(P1+P2) represents the encryption of the sum of the two plaintexts.</sub>
 <br/><br/>
 PHE algorithms are relatively easy to design, in fact common encryption algorithms like the RSA algorithm are partially homomorphic by chance. The RSA algorithm is multiplicatively homomorphic, the reason for this is because the algorithm is based on exponentiation: C = (m^x)(mod n) where m is the message and x is the secret key. The rules of exponentiation say that (a^n)(b^n)=(ab)^n, this means that multiplying two cipher texts encrypted with the same key is equivalent to raising the product of the plaintext to the power of the secret key. Through this RSA algorithm exhibits partial homomorphic properties through multiplication operations.
 <br/><br/>
