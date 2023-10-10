@@ -1,7 +1,7 @@
 # Homomorphic Encryption: The Power of Secure Data Processing
 <sub>by John Narte</sub>
 <br/><br/>
-![image](/docs/assets/Homo-Encryption-Feature.png)
+![image](/assets/Homo-Encryption-Feature.png)
 <br/><br/>
 ## Introduction
 In today's digital age, data serves as the lifeblood of businesses and organizations worldwide. However, the increase in generating and sharing of data also pose significant risks to data privacy and security. Organizations are always seeking ways to secure the privacy and confidentiality of their data. Various Encryption Methods provide the means to secure data, allowing it to be transformed into a format that is not readable by human eyes, this format can only be translated by deciphering it with the appropriate decryption key. This way the data is protected from prying eyes, but a crucial issue comes up when data needs to be decrypted for use, and it is the data’s confidentiality. Not a lot of Encryption methods can provide both data privacy and confidentiality, however a method for full confidentiality was first envisioned in 1978 by Rivest, Adleman, and Dertouzos. It wasn’t until 2009 that the very first Homomorphic Encryption was constructed by a computer scientist named Craig Gentry.
