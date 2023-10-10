@@ -1,7 +1,7 @@
 # Homomorphic Encryption: The Power of Secure Data Processing
 <sub>by John Narte</sub>
 <br/><br/>
-![image](/docs/assets/Homo-Encryption-Feature.png)
+![image](https://github.com/i0uthis/blog.intp-362/blob/main/docs/assets/Homo-Encryption-Feature.png)
 <br/><br/>
 ## Introduction
 In today's digital age, data serves as the lifeblood of businesses and organizations worldwide. However, the increase in generating and sharing of data also pose significant risks to data privacy and security. Organizations are always seeking ways to secure the privacy and confidentiality of their data. Various Encryption Methods provide the means to secure data, allowing it to be transformed into a format that is not readable by human eyes, this format can only be translated by deciphering it with the appropriate decryption key. This way the data is protected from prying eyes, but a crucial issue comes up when data needs to be decrypted for use, and it is the data’s confidentiality. Not a lot of Encryption methods can provide both data privacy and confidentiality, however a method for full confidentiality was first envisioned in 1978 by Rivest, Adleman, and Dertouzos. It wasn’t until 2009 that the very first Homomorphic Encryption was constructed by a computer scientist named Craig Gentry.
@@ -16,7 +16,7 @@ The goal of Homomorphic Encryption is to enable an infinite number of additions 
 ### Partially Homomorphic Encryption (PHE)
 This type allows a defined operation, either addition or multiplication, to be performed an infinite number of times. For example, a particular algorithm may be additively homomorphic, meaning adding two ciphertexts together produces the same result as encrypting the sum of the two plaintexts.
 <br/><br/>
-![equation](/docs/assets/basic-equation.png)\
+![equation](https://github.com/i0uthis/blog.intp-362/blob/main/docs/assets/basic-equation.png)\
 <sub>This shows a basic equation of the example above. C1+C2 represents the addition of two ciphertexts, and E(P1+P2) represents the encryption of the sum of the two plaintexts.</sub>
 <br/><br/>
 PHE algorithms are relatively easy to design, in fact common encryption algorithms like the RSA algorithm are partially homomorphic by chance. The RSA algorithm is multiplicatively homomorphic, the reason for this is because the algorithm is based on exponentiation: C = (m^x)(mod n) where m is the message and x is the secret key. The rules of exponentiation say that (a^n)(b^n)=(ab)^n, this means that multiplying two cipher texts encrypted with the same key is equivalent to raising the product of the plaintext to the power of the secret key. Through this RSA algorithm exhibits partial homomorphic properties through multiplication operations.
