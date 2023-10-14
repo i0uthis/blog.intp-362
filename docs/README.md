@@ -39,15 +39,15 @@ For example, IBM released an improved version of their homomorphic encryption li
 Homomorphic Encryption has the potential to redefine how we protect, and process data. While challenges persist, the rapid advancements and the dedication of the researchers and organizations who are using this technology in their systems underscore the promise of Homomorphic Encryption. In a world where data is both the catalyst for innovation and a treasure trove of sensitive information, Homomorphic Encryption represents the future of data security where we can unlock the full potential of our data without compromising its integrity.
 <br/><br/>
 ## References
-[1] “What is Homomorphic Encryption?,” Hashed out by The SSL StoreTM, Jun. 20, 2019.
- https://www.thesslstore.com/blog/what-is-homomorphic-encryption/#:~:text=The%20origins%20of%20homomorphic%20encryption,the%20concept%20of%20privacy%20homomorphisms (accessed Oct. 10, 2023).
+[1] “What is Homomorphic Encryption?,” Hashed out by The SSL StoreTM, Jun. 20, 2019. \
+<https://www.thesslstore.com/blog/what-is-homomorphic-encryption/#:~:text=The%20origins%20of%20homomorphic%20encryption,the%20concept%20of%20privacy%20homomorphisms> (accessed Oct. 10, 2023).
 <br/><br/>
-[2] A. Gillis, ”What is Homomorphic Encryption?,” Tech Target | Security, Aug. 2022.
-https://www.techtarget.com/searchsecurity/definition/homomorphic-encryption#:~:text=Homomorphic%20encryption%20enables%20complex%20mathematical,between%20elements%20in%20both%20sets (accessed Oct. 11, 2023).
+[2] A. Gillis, ”What is Homomorphic Encryption?,” Tech Target | Security, Aug. 2022. \
+<https://www.techtarget.com/searchsecurity/definition/homomorphic-encryption#:~:text=Homomorphic%20encryption%20enables%20complex%20mathematical,between%20elements%20in%20both%20sets> (accessed Oct. 11, 2023).
 <br/><br/>
-[3] A. Arampatzis, “What is Homomorphic Encryption & How it is Used | Venafi”, Venafi, April 28, 2023. 
-https://venafi.com/blog/homomorphic-encryption-what-it-and-how-it-used/ (accessed Oct 11, 2023).
+[3] A. Arampatzis, “What is Homomorphic Encryption & How it is Used | Venafi”, Venafi, April 28, 2023. \
+<https://venafi.com/blog/homomorphic-encryption-what-it-and-how-it-used/> (accessed Oct 11, 2023).
 <br/><br/>
-[4] R. Yackel, “What is homomorphic encryption, and why isn’t it mainstream?,” Keyfactor, Jul. 06, 2021.
-https://www.keyfactor.com/blog/what-is-homomorphic-encryption/ (accessed Oct 12 2023)
+[4] R. Yackel, “What is homomorphic encryption, and why isn’t it mainstream?,” Keyfactor, Jul. 06, 2021. \
+<https://www.keyfactor.com/blog/what-is-homomorphic-encryption/> (accessed Oct 12 2023)
 <br/><br/>
