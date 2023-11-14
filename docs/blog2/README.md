@@ -17,7 +17,7 @@ insert code snippets as well
 ## References
 https://github.com/Microsoft/SEAL 
 <br/><br/>
-https://medium.com/privacy-preserving-natural-language-processing/homomorphic-encryption-for-beginners-a-practical-guide-part-1-b8f26d03a98a \
+https://medium.com/privacy-preserving-natural-language-processing/homomorphic-encryption-for-beginners-a-practical-guide-part-1-b8f26d03a98a 
 <br/><br/>
 https://www.youtube.com/watch?v=7vJJMU2gMn4 
 <br/><br/>
