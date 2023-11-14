@@ -15,8 +15,13 @@ lines about how one can use the SEAL library
 \
 insert code snippets as well
 ## References
-https://github.com/Microsoft/SEAL 
-\ https://medium.com/privacy-preserving-natural-language-processing/homomorphic-encryption-for-beginners-a-practical-guide-part-1-b8f26d03a98a 
-\ https://www.youtube.com/watch?v=7vJJMU2gMn4
-\ [4]https://github.com/jonaschn/awesome-he 
-\ https://github.com/Huelse/SEAL-Python 
+https://github.com/Microsoft/SEAL \
+<br/><br/>
+https://medium.com/privacy-preserving-natural-language-processing/homomorphic-encryption-for-beginners-a-practical-guide-part-1-b8f26d03a98a \
+<br/><br/>
+https://www.youtube.com/watch?v=7vJJMU2gMn4 \
+<br/><br/>
+[4]https://github.com/jonaschn/awesome-he \
+<br/><br/>
+https://github.com/Huelse/SEAL-Python \
+<br/><br/>
