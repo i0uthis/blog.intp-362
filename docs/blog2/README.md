@@ -195,10 +195,11 @@ if __name__ == "__main__":
 
 ```
 <br>
-This code demonstrates the encryption and decryption process for a concatenated message and showcases different characteristics of the resulting ciphertext such as noise budget, size, and the encryption parameters. It handles the multiple messages via batch encoding within a single encryption. <br>
-Output of Code: 
+This code demonstrates the encryption and decryption process for a concatenated message and showcases different characteristics of the resulting ciphertext such as noise budget, size, and the encryption parameters. It handles the multiple messages via batch encoding within a single encryption. 
 <br>
 
+### Output of Code:
+<br>
 ![output](assets/code-output.png)
 <br>
 
