@@ -38,7 +38,7 @@ For example, IBM released an improved version of their homomorphic encryption li
 ## Conclusion
 Homomorphic Encryption has the potential to redefine how we protect, and process data. While challenges persist, the rapid advancements and the dedication of the researchers and organizations who are using this technology in their systems underscore the promise of Homomorphic Encryption. In a world where data is both the catalyst for innovation and a treasure trove of sensitive information, Homomorphic Encryption represents the future of data security where we can unlock the full potential of our data without compromising its integrity.
 <br/><br/>
-Continued in [blog2](https://i0uthis.github.io/blog.intp-362/)
+Continued in [blog2](https://i0uthis.github.io/blog.intp-362/blog2)
 <br/><br/>
 ## References
 [1] “What is Homomorphic Encryption?,” Hashed out by The SSL StoreTM, Jun. 20, 2019. \
