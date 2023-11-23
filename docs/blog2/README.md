@@ -200,6 +200,7 @@ This code demonstrates the encryption and decryption process for a concatenated 
 
 ### Output of Code:
 <br>
+
 ![output](assets/code-output.png)
 <br>
 
