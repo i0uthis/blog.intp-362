@@ -114,6 +114,9 @@ The PySEAL repository in GitHub unfortunately is only a proof of concept however
 
 Now we have installed SEAL-Python. Next I will be demonstrating using my own python code based on the SEAL-Python library to demonstrate some basic operations using the BGV scheme. This code will include the setting up of encryption parameters, key generation, encryption and decryption, batch encoding, homomorphic operations, modulus switching and printing the results of each operation.
 
+## SEAL-Python code: <br>
+***Disclaimer: This code does not represent Homomorphic encryption in a real world setting as it does the encryption and decryption in one script*** <br>
+The code below will demonstrate the basic usage of SEAL library for homomorphic encryption: <br>
 ```
 from seal import *
 import random
@@ -191,6 +194,12 @@ if __name__ == "__main__":
         customHE()
 
 ```
+<br>
+This code demonstrates the encryption and decryption process for a concatenated message and showcases different characteristics of the resulting ciphertext such as noise budget, size, and the encryption parameters. It handles the multiple messages via batch encoding within a single encryption.
+<br>
+Output of code: <br>
+![output](assets/code-output.png)
+
 
 <br/><br/>
 # References: <br>
