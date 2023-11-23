@@ -4,7 +4,7 @@
 ![Homomorphic Encryption](assets/Homo-Encryption-Feature.png)
 \
 <br/><br/>
-This blog is a continuation of “Homomorphic Encryption: The Power of Secure Data Processing” by John Narte [1]. In this blog we will expand upon the basics of homomorphic encryption, followed by a brief overview of some open source homomorphic encryption libraries currently available, and then will finish a tutorial on how to use one such libraries namely PySEAL.
+This blog is a continuation of “Homomorphic Encryption: The Power of Secure Data Processing” by John Narte [1]. In this blog we will delve deeper into the fundamentals of homomorphic encryption, followed by a brief overview of some open-source homomorphic encryption libraries currently available, and concludes with a tutorial on how to use one such libraries namely SEAL.
 <br/><br/>
 ## A brief into homomorphic encryption
 A popular example of the use of homomorphic encryption is where a data owner wants to send data to a cloud-based service for processing, but they do not trust the service provider with their data. With a homomorphic encryption scheme, the data owner can encrypt their data and sends it to the cloud server. The server will perform the relevant computations against the data without ever needing the decryption key and sends back the encrypted results to the data owner. The data owner is then able to read the results because only they have the decryption key. This method of encryption retains the confidentiality of the encrypted data because only one person knows the key to unlocking it.[2]
@@ -195,12 +195,39 @@ if __name__ == "__main__":
 
 ```
 <br>
-This code demonstrates the encryption and decryption process for a concatenated message and showcases different characteristics of the resulting ciphertext such as noise budget, size, and the encryption parameters. It handles the multiple messages via batch encoding within a single encryption.
-<br>
-Output of code: <br>
+This code demonstrates the encryption and decryption process for a concatenated message and showcases different characteristics of the resulting ciphertext such as noise budget, size, and the encryption parameters. It handles the multiple messages via batch encoding within a single encryption.<br>
+Output of Code: <br>
+
 ![output](assets/code-output.png)
+<br>
 
-
+### Plaintext matrix: <br>
+The output of this shows the plaintext matrix size which refers to the number of slots required for encoding a message. If we consider my example my message contains four lines of strings that have varying number of characters. Each of those characters would require their own slot in the plaintext matrix but the exact number of slots needed may vary depending on the encoding scheme used to pack characters into the slots. In my code, I am using a batch encoding scheme which allows for multiple characters to be packed into a single slot, reducing the total number of slots needed.
+<br>
+### Encryption and Decryption: <br>
+As you can see the output of my code shows the original message as it was typed in a dictionary and the decrypted message shown as a string printed with a print statement. Unfortunately, I am unable to show what the encrypted message looks like as SEAL does not allow for such a thing. 
+If you try to print the encrypted message you would likely get something like this: <br>
+![cipher](assets/print-cipher.png)
+<br>
+This represents the memory reference or the object itself and not the actual content of the ciphertext. You cannot directly print the encrypted data as you would regular data, which makes sense as it can destroy the encryption’s integrity. For debugging/illustration processes Microsoft SEAL allows for the extraction of specific properties of the ciphertext object like the noise budget, ciphertext size, and encryption parameters.
+<br>
+### Noise Budget: <br>
+![noise](assets/noise.png)
+<br>
+As mentioned above the noise or error is introduced during the operation of the encryption. Noise budget is not the same as the Noise Threshold. Noise Budget refers to the amount of noise present in the ciphertext and Noise threshold refers to a predetermined limit that when reach could cause potential issues with the security or accuracy of the encrypted data. The noise budget shows the “health” of the encrypted data, ensuring that the noise doesn’t reach the noise threshold. If the noise budget decreases too much, it may impact the reliability of the decryption process. Having a way to manage the noise budget is crucial to maintaining security and accuracy of the computations in a homomorphic encryption scheme.
+<br>
+### Ciphertext Size: <br>
+![size](assets/cipher-size.png)
+<br>
+My code’s ciphertext size mean that my ciphertext contains two polynomials which relates to the structure of the BGV scheme my code is using. The scheme involves the handling of multiple polynomials within a single ciphertext for homomorphic operations. Each polynomial in the ciphertext may represent different parts of the encrypted, and the size of the polynomials in the ciphertext can change as operations are performed on it.
+<br>
+### Encryption Parameters: <br>
+![parms](assets/encrypt-param.png)
+<br>
+These numbers in SEAL refers to the parameters used during the encryption process. Each ID correspond to different aspects of the encryption scheme, aspects like poly modulus degree, coefficient modulus and plain modulus. Poly modulus degree determines the size of the polynomials that the HE scheme deals with, higher degree values will offer stronger security but increases the complexity of the computations. Coefficient modulus directly influences the ciphertext size and noise budget which affects security and precision of the HE computations. Plain modulus determines the size of the plaintext data type and the consumption of noise budget in multiplications, it’s specifically tailored for batching operations. A smaller plain modulus value will provide better efficiency but reduces the amount of data that can be encrypted.
+<br>
+## Conclusion
+Homomorphic Encryption enables secure computation on encrypted data while preserving its integrity. We explored schemes like BGV, BFV, and CKKS and talked about the challenges one can face when they try their hand creating a homomorphic encryption scheme. We explored Libraries like PALISADE, SEAL, HElib and PySEAL all of which shows the diverse capabilities of homomorphic encryption. We tried our hand at using homomorphic encryption using SEAL-Python, which unfortunately does not reflect the way homomorphic encryption can be used in the real world. However, it gives us a glimpse into this encryption method’s operations and characteristics. Overall this technology has immense potential to revolutionize how we can secure our data, while ensuring confidentiality in computations for a privacy centered digital future.
 <br/><br/>
 # References: <br>
 [1]https://i0uthis.github.io/blog.intp-362/ <br>
@@ -218,4 +245,7 @@ https://crypto.stanford.edu/craig/craig-thesis.pdf <br>
 https://medium.com/bioquest/pyseal-homomorphic-encryption-in-a-user-friendly-python-package-51dd6cb0411c <br>
 https://github.com/Huelse <br>
 https://geekflare.com/lattice-based-cryptography/ <br>
+https://github.com/OpenMined/TenSEAL/blob/main/tutorials%2FTutorial%202%20-%20Working%20with%20Approximate%20Numbers.ipynb <br>
+https://github.com/microsoft/SEAL/blob/main/native/examples/1_bfv_basics.cpp
+
 
