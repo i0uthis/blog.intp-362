@@ -45,15 +45,15 @@ PySEAL [] is a Python wrapper around Microsoft’s SEAL library, it is designed 
 The PySEAL repository in GitHub unfortunately is only a proof of concept however I found another repository made by a GitHub user called “Huelse” [] called SEAL-Python. The repository has a guide on how to setup SEAL-python in Linux and Windows environments.
 <br/><br/>
 Installing Prerequisites:<br>
-•	SEAL-python requires a couple of packages that need install. To install them use the following commands:
+•	SEAL-python requires a couple of packages that need install. To install them use the following commands: <br>
 “sudo apt-get install git build-essential cmake python3 python3-dev python3-pip”
  
 Clone SEAL-Python: <br>
 •	Clone the SEAL-Python library using the git command from GitHub
-•	If you would want to have the repository cloned to a different place please move to it before executing the following commands:
+•	If you would want to have the repository cloned to a different place please move to it before executing the following commands: <br>
 “git clone https://github.com/Huelse/SEAL-Python.git”
  
-•	Once the clone is finished move into the repository using the cd command:
+•	Once the clone is finished move into the repository using the cd command: <br>
 “cd SEAL-Python”
  
 
@@ -63,7 +63,7 @@ Install dependencies: <br>
  
 
 Initialize SEAL and pybind11: <br>
-•	Update and initialize the submodules needed by the SEAL-Python library using the “git submodule” command:
+•	Update and initialize the submodules needed by the SEAL-Python library using the “git submodule” command: <br>
 “git submodule update –init –recursive”
  
 
@@ -72,7 +72,7 @@ Build the SEAL library: <br>
 •	In the directory use the cmake command to configure the SEAL library
 “cmake -S . -B build -DSEAL_USE_MSGSL=OFF -DSEAL_USE_ZLIB=OFF”
  
-•	Build the library using the following command:
+•	Build the library using the following command: <br>
 “cmake --build build”
  
 Running the Setup: <br>
@@ -82,11 +82,11 @@ Running the Setup: <br>
 Test the installation: <br>
 •	If everything has been setup correctly, SEAL-Python should be ready to use. But before that we will need to test and see.
 •	First we will need to copy the ‘seal.*.so’ file to the example directory
- 
+ ![test1](assets/test-install-3.png)
 •	Run the ‘4_bgv_basics.py’ file to test the functionality of the library.
- 
-•	If all is working correctly the output should look like this:
- 
+ ![test2](assets/test-install-3.png)
+•	If all is working correctly the output should look like this: <br>
+ ![test3](assets/test-install-3.png)
 
 Now we have installed SEAL-Python. Next I will be demonstrating using my own python code based on the SEAL-Python library to demonstrate some basic operations using the BGV scheme. This code will include the setting up of encryption parameters, key generation, encryption and decryption, batch encoding, homomorphic operations, modulus switching and printing the results of each operation.
 
