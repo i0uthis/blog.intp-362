@@ -44,7 +44,7 @@ PySEAL [] is a Python wrapper around Microsoft’s SEAL library, it is designed 
 ## Demonstration on SEAL-Python []
 The PySEAL repository in GitHub unfortunately is only a proof of concept however I found another repository made by a GitHub user called “Huelse” [] called SEAL-Python. The repository has a guide on how to setup SEAL-python in Linux and Windows environments.
 <br/><br/>
-Installing Prerequisites:
+Installing Prerequisites:<br>
 •	SEAL-python requires a couple of packages that need install. To install them use the following commands:
 “sudo apt-get install git build-essential cmake python3 python3-dev python3-pip”
  
@@ -57,17 +57,17 @@ Clone SEAL-Python: <br>
 “cd SEAL-Python”
  
 
-Install dependencies:
+Install dependencies:<br>
 •	Use the pip command to install required dependencies for SEAL-Python
 “pip3 install numpy pybind11”
  
 
-Initialize SEAL and pybind11:
+Initialize SEAL and pybind11:<br>
 •	Update and initialize the submodules needed by the SEAL-Python library using the “git submodule” command:
 “git submodule update –init –recursive”
  
 
-Build the SEAL library:
+Build the SEAL library:<br>
 •	In the SEAL-Python directory navigate to the ‘SEAL’ directory
 •	In the directory use the cmake command to configure the SEAL library
 “cmake -S . -B build -DSEAL_USE_MSGSL=OFF -DSEAL_USE_ZLIB=OFF”
@@ -75,11 +75,11 @@ Build the SEAL library:
 •	Build the library using the following command:
 “cmake --build build”
  
-Running the Setup:
+Running the Setup:<br>
 •	After the SEAL library is successfully built, return to the root directory of SEAL-Python and run the setup.py file to build and install the necessary extensions.
 “python3 setup.py build_ext -I”
  
-Test the installation:
+Test the installation:<br>
 •	If everything has been setup correctly, SEAL-Python should be ready to use. But before that we will need to test and see.
 •	First we will need to copy the ‘seal.*.so’ file to the example directory
  
