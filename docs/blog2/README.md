@@ -116,19 +116,19 @@ Now we have installed SEAL-Python. Next I will be demonstrating using my own pyt
 
 <br/><br/>
 References
-[1]https://i0uthis.github.io/blog.intp-362/
-[2]https://www.private-ai.com/2018/12/26/homomorphic-encryption-for-beginners-a-practical-guide-part-1/
-https://eprint.iacr.org/2011/277.pdf (BGV)
-https://eprint.iacr.org/2012/144.pdf (BFV)
-https://eprint.iacr.org/2016/421.pdf (CKKS)
-https://github.com/Microsoft/SEAL
-[3]https://medium.com/privacy-preserving-natural-language-processing/homomorphic-encryption-for-beginners-a-practical-guide-part-1-b8f26d03a98a
-https://www.youtube.com/watch?v=7vJJMU2gMn4
-[4]https://github.com/jonaschn/awesome-he
-https://github.com/Huelse/SEAL-Python
-https://medium.com/cryptoblog/what-is-lattice-based-cryptography-why-should-you-care-dbf9957ab717
-https://crypto.stanford.edu/craig/craig-thesis.pdf
-https://medium.com/bioquest/pyseal-homomorphic-encryption-in-a-user-friendly-python-package-51dd6cb0411c
-https://github.com/Huelse
-https://geekflare.com/lattice-based-cryptography/
+[1]https://i0uthis.github.io/blog.intp-362/ <br>
+[2]https://www.private-ai.com/2018/12/26/homomorphic-encryption-for-beginners-a-practical-guide-part-1/ <br>
+https://eprint.iacr.org/2011/277.pdf (BGV) <br>
+https://eprint.iacr.org/2012/144.pdf (BFV) <br>
+https://eprint.iacr.org/2016/421.pdf (CKKS) <br>
+https://github.com/Microsoft/SEAL <br>
+[3]https://medium.com/privacy-preserving-natural-language-processing/homomorphic-encryption-for-beginners-a-practical-guide-part-1-b8f26d03a98a <br>
+https://www.youtube.com/watch?v=7vJJMU2gMn4 <br>
+[4]https://github.com/jonaschn/awesome-he <br>
+https://github.com/Huelse/SEAL-Python <br>
+https://medium.com/cryptoblog/what-is-lattice-based-cryptography-why-should-you-care-dbf9957ab717 <br>
+https://crypto.stanford.edu/craig/craig-thesis.pdf <br>
+https://medium.com/bioquest/pyseal-homomorphic-encryption-in-a-user-friendly-python-package-51dd6cb0411c <br>
+https://github.com/Huelse <br>
+https://geekflare.com/lattice-based-cryptography/ <br>
 
