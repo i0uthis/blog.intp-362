@@ -115,7 +115,7 @@ The PySEAL repository in GitHub unfortunately is only a proof of concept however
 Now we have installed SEAL-Python. Next I will be demonstrating using my own python code based on the SEAL-Python library to demonstrate some basic operations using the BGV scheme. This code will include the setting up of encryption parameters, key generation, encryption and decryption, batch encoding, homomorphic operations, modulus switching and printing the results of each operation.
 
 <br/><br/>
-References
+# References: <br>
 [1]https://i0uthis.github.io/blog.intp-362/ <br>
 [2]https://www.private-ai.com/2018/12/26/homomorphic-encryption-for-beginners-a-practical-guide-part-1/ <br>
 https://eprint.iacr.org/2011/277.pdf (BGV) <br>
