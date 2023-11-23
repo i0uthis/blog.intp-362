@@ -48,7 +48,7 @@ Installing Prerequisites:
 •	SEAL-python requires a couple of packages that need install. To install them use the following commands:
 “sudo apt-get install git build-essential cmake python3 python3-dev python3-pip”
  
-Clone SEAL-Python:
+Clone SEAL-Python: \
 •	Clone the SEAL-Python library using the git command from GitHub
 •	If you would want to have the repository cloned to a different place please move to it before executing the following commands:
 “git clone https://github.com/Huelse/SEAL-Python.git”
