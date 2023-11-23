@@ -22,12 +22,12 @@ def custom_homomorphic_operations():
     public_key = keygen.create_public_key()
     relin_keys = keygen.create_relin_keys()
 
-    #
+    #initiallize encrytor and decryptor
     encryptor = Encryptor(context, public_key)
     evaluator = Evaluator(context)
     decryptor = Decryptor(context, secret_key)
 
-    #
+    #initiallize batch encoding for encryption
     batch_encoder = BatchEncoder(context)
     slot_count = batch_encoder.slot_count()
     row_size = slot_count / 2
