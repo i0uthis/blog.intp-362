@@ -57,17 +57,17 @@ Clone SEAL-Python: <br>
 “cd SEAL-Python”
  
 
-Install dependencies:<br>
+Install dependencies: <br>
 •	Use the pip command to install required dependencies for SEAL-Python
 “pip3 install numpy pybind11”
  
 
-Initialize SEAL and pybind11:<br>
+Initialize SEAL and pybind11: <br>
 •	Update and initialize the submodules needed by the SEAL-Python library using the “git submodule” command:
 “git submodule update –init –recursive”
  
 
-Build the SEAL library:<br>
+Build the SEAL library: <br>
 •	In the SEAL-Python directory navigate to the ‘SEAL’ directory
 •	In the directory use the cmake command to configure the SEAL library
 “cmake -S . -B build -DSEAL_USE_MSGSL=OFF -DSEAL_USE_ZLIB=OFF”
@@ -75,11 +75,11 @@ Build the SEAL library:<br>
 •	Build the library using the following command:
 “cmake --build build”
  
-Running the Setup:<br>
+Running the Setup: <br>
 •	After the SEAL library is successfully built, return to the root directory of SEAL-Python and run the setup.py file to build and install the necessary extensions.
 “python3 setup.py build_ext -I”
  
-Test the installation:<br>
+Test the installation: <br>
 •	If everything has been setup correctly, SEAL-Python should be ready to use. But before that we will need to test and see.
 •	First we will need to copy the ‘seal.*.so’ file to the example directory
  
