@@ -1,7 +1,7 @@
 # Homomorphic Encryption: A Practical Guide
 <sub>by John Narte</sub>
 <br/><br/>
-image here
+![Homomorphic Encryption](assets/Homo-Encryption-Feature.png)
 \
 <br/><br/>
 This blog is a continuation of “Homomorphic Encryption: The Power of Secure Data Processing” by John Narte [1]. In this blog we will expand upon the basics of homomorphic encryption, followed by a brief overview of some open source homomorphic encryption libraries currently available, and then will finish a tutorial on how to use one such libraries namely PySEAL.
