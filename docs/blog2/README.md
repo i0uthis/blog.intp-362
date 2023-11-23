@@ -81,9 +81,9 @@ Running the Setup: <br>
  
 Test the installation: <br>
 •	If everything has been setup correctly, SEAL-Python should be ready to use. But before that we will need to test and see.
-•	First we will need to copy the ‘seal.*.so’ file to the example directory
+•	First we will need to copy the ‘seal.*.so’ file to the example directory <br>
  ![test1](assets/test-install-3.png)
-•	Run the ‘4_bgv_basics.py’ file to test the functionality of the library.
+•	Run the ‘4_bgv_basics.py’ file to test the functionality of the library. <br>
  ![test2](assets/test-install-3.png)
 •	If all is working correctly the output should look like this: <br>
  ![test3](assets/test-install-3.png)
