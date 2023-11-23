@@ -13,11 +13,9 @@ The most efficient homomorphic encryption scheme when performing the same operat
 
 These three encryption schemes are all based on lattice-based cryptography which is a branch of modern cryptography that leverages mathematical properties of lattices to create cryptographic protocols and systems. Lattices are sets of points in a multi-dimensional space that forms a grid like structure that can be visualized as grid of points with regularly spaced rows and columns. 
 
-picture of lattice
+![lattice](assets/lattice.png)
 
 There are several hard problems within these lattices that form the basis of lattice-based cryptography. The most common ones include Shortest Vector Problem (SVP), Closes Vector Problem (CVP), Learning With Errors (LWE), and Ring Learning With Errors (RLWE). These hard problems all solve for different things, SVP solves for the shortest non-zero vector in a lattice, CVP solves for the lattice point closest to a given point, LWE determines a secret from noisy information about linear equations in a lattice, and RWLE solves for the same problem as LWE but in polynomial rings. Which is a mathematical structure where you can perform operations such as addition, subtraction, multiplication, and division on polynomials.
-
-Picture of RWLE
 
 The three encryption schemes mentioned above are dependent on the hardness of the RWLE problem. BGV, BFV, and CKKS are additively and multiplicatively homomorphic which means you can perform both addition and multiplication (no division) within the encrypted domain. In BGV and BFV, computations can only be performed on integers. In CKKS, computations can be performed on complex numbers with limited precision. However, you cannot perform unlimited computations within the encrypted domain without running into two issues:
 
@@ -40,13 +38,58 @@ SEAL [], which stands for “Simple Encrypted Arithmetic Library” is an encryp
 HElib [], which stands for “Homomorphic Encryption Library” is an encryption library developed by researchers at IBM Research. This library supports the implementation of the Gentry-FHE scheme based on ideal lattices. This scheme allows for random computations on encrypted data while preserving the privacy of the data. This library serves as a platform for researchers, developers, and anyone who is interested in exploring and experimenting with homomorphic encryption.
 
 PySEAL [] is a Python wrapper around Microsoft’s SEAL library, it is designed to facilitate homomorphic encryption in Python-based environments. This makes it convenient for Python developers to work with homomorphic encryption without need to interface with the C++ implementation directly. PySEAL serves as a bridge between the powerful encryption library of SEAL and the Python Environment, allowing for a more accessible and user-friendly way to perform computations on encrypted data for Python developers.
-
-Picture of something to do with encryption probably a lock
+<br/><br/>
+![lock](asset/lock.png)
 <br/><br/>
 ## Demonstration on SEAL-Python []
 The PySEAL repository in GitHub unfortunately is only a proof of concept however I found another repository made by a GitHub user called “Huelse” [] called SEAL-Python. The repository has a guide on how to setup SEAL-python in Linux and Windows environments.
 <br/><br/>
-Demonstration on SEAL-Python here
+Installing Prerequisites:
+•	SEAL-python requires a couple of packages that need install. To install them use the following commands:
+“sudo apt-get install git build-essential cmake python3 python3-dev python3-pip”
+ 
+Clone SEAL-Python:
+•	Clone the SEAL-Python library using the git command from GitHub
+•	If you would want to have the repository cloned to a different place please move to it before executing the following commands:
+“git clone https://github.com/Huelse/SEAL-Python.git”
+ 
+•	Once the clone is finished move into the repository using the cd command:
+“cd SEAL-Python”
+ 
+
+Install dependencies:
+•	Use the pip command to install required dependencies for SEAL-Python
+“pip3 install numpy pybind11”
+ 
+
+Initialize SEAL and pybind11:
+•	Update and initialize the submodules needed by the SEAL-Python library using the “git submodule” command:
+“git submodule update –init –recursive”
+ 
+
+Build the SEAL library:
+•	In the SEAL-Python directory navigate to the ‘SEAL’ directory
+•	In the directory use the cmake command to configure the SEAL library
+“cmake -S . -B build -DSEAL_USE_MSGSL=OFF -DSEAL_USE_ZLIB=OFF”
+ 
+•	Build the library using the following command:
+“cmake --build build”
+ 
+Running the Setup:
+•	After the SEAL library is successfully built, return to the root directory of SEAL-Python and run the setup.py file to build and install the necessary extensions.
+“python3 setup.py build_ext -I”
+ 
+Test the installation:
+•	If everything has been setup correctly, SEAL-Python should be ready to use. But before that we will need to test and see.
+•	First we will need to copy the ‘seal.*.so’ file to the example directory
+ 
+•	Run the ‘4_bgv_basics.py’ file to test the functionality of the library.
+ 
+•	If all is working correctly the output should look like this:
+ 
+
+Now we have installed SEAL-Python. Next I will be demonstrating using my own python code based on the SEAL-Python library to demonstrate some basic operations using the BGV scheme. This code will include the setting up of encryption parameters, key generation, encryption and decryption, batch encoding, homomorphic operations, modulus switching and printing the results of each operation.
+
 <br/><br/>
 References
 [1]https://i0uthis.github.io/blog.intp-362/
@@ -63,5 +106,5 @@ https://medium.com/cryptoblog/what-is-lattice-based-cryptography-why-should-you-
 https://crypto.stanford.edu/craig/craig-thesis.pdf
 https://medium.com/bioquest/pyseal-homomorphic-encryption-in-a-user-friendly-python-package-51dd6cb0411c
 https://github.com/Huelse
-
+https://geekflare.com/lattice-based-cryptography/
 
