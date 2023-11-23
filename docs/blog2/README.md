@@ -44,6 +44,8 @@ PySEAL [] is a Python wrapper around Microsoft’s SEAL library, it is designed 
 Picture of something to do with encryption probably a lock
 <br/><br/>
 ## Demonstration on SEAL-Python []
+The PySEAL repository in GitHub unfortunately is only a proof of concept however I found another repository made by a GitHub user called “Huelse” [] called SEAL-Python. The repository has a guide on how to setup SEAL-python in Linux and Windows environments.
+<br/><br/>
 Demonstration on SEAL-Python here
 <br/><br/>
 References
