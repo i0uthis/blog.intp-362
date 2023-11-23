@@ -1,5 +1,6 @@
 # Homomorphic Encryption: The Power of Secure Data Processing
 <sub>by John Narte</sub>
+link to [blog2](/docs/blog2)
 <br/><br/>
 ![Homomorphic Encryption](assets/Homo-Encryption-Feature.png)
 \
