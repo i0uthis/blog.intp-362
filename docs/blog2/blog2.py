@@ -1,80 +1,73 @@
 from seal import *
-import numpy as np
+import random
 
 def print_vector(vector):
     print('[ ', end='')
-    for i in range(0, min(len(vector), 8)):
+    for i in range(0, len(vector)):
         print(vector[i], end=', ')
     print('... ]')
 
-def homomorphic_operations():
-    # Setup Encryption Parameters
-    parms = EncryptionParameters(scheme_type.BFV)
+def custom_homomorphic_operations():
+    #setup SEAL parameters
+    parms = EncryptionParameters(scheme_type.bgv)
     poly_modulus_degree = 8192
     parms.set_poly_modulus_degree(poly_modulus_degree)
     parms.set_coeff_modulus(CoeffModulus.BFVDefault(poly_modulus_degree))
     parms.set_plain_modulus(PlainModulus.Batching(poly_modulus_degree, 20))
     context = SEALContext(parms)
-
-    # Key Generation
+    
+    #generate keys
     keygen = KeyGenerator(context)
     secret_key = keygen.secret_key()
     public_key = keygen.create_public_key()
     relin_keys = keygen.create_relin_keys()
 
-    # Encryptor, Evaluator, and Decryptor
+    #
     encryptor = Encryptor(context, public_key)
     evaluator = Evaluator(context)
     decryptor = Decryptor(context, secret_key)
 
-    # Batch Encoder
+    #
     batch_encoder = BatchEncoder(context)
     slot_count = batch_encoder.slot_count()
-    row_size = slot_count // 2
+    row_size = slot_count / 2
     print(f'Plaintext matrix row size: {row_size}')
 
-    # Encrypt two plaintext matrices
-    matrix1 = np.random.randint(0, 100, row_size).tolist()
-    matrix2 = np.random.randint(0, 100, row_size).tolist()
+    #create plaintext string data to be encrypted
+    message = "Hello, This is a secret message."
+    
+    #convert message into numbers
+    matrix1 = convert_message_to_numbers(message, slot_count)
+    
+    #print original message
+    print(f"Original Message: {message}")
+    
+    #encode and encrypt plaintexts
+    plain1 = batch_encoder.encode(matrix1)
+    encrypted1 = encryptor.encrypt(plain1)
+    
+    print(f"Ecryption: {encrypted1}")
 
-    plaintext_matrix1 = batch_encoder.encode(matrix1)
-    plaintext_matrix2 = batch_encoder.encode(matrix2)
+    #decrypt the encrypted data
+    decrypted_result = decryptor.decrypt(encrypted1)
+    pod_result = batch_encoder.decode(decrypted_result)
 
-    encrypted_matrix1 = Ciphertext()
-    encrypted_matrix2 = Ciphertext()
+    #convert the decrypted values back to a string message
+    decrypted_message = convert_numbers_to_message(pod_result)
 
-    encryptor.encrypt(plaintext_matrix1, encrypted_matrix1)
-    encryptor.encrypt(plaintext_matrix2, encrypted_matrix2)
+    #print the decrypted message
+    print(f"Decrypted Message: {decrypted_message}")
 
-    # Perform addition on encrypted matrices
-    encrypted_sum = Ciphertext()
-    evaluator.add(encrypted_matrix1, encrypted_matrix2, encrypted_sum)
+#function to convert string message to numerical numbers using the ord() function
+def convert_message_to_numbers(message, slot_count):
+    # Convert the message to a numerical representation (plaintext)
+    return [ord(char) for char in message]
 
-    # Perform multiplication on encrypted matrices
-    encrypted_product = Ciphertext()
-    evaluator.multiply(encrypted_matrix1, encrypted_matrix2, encrypted_product)
 
-    # Decrypt and print results
-    decrypted_sum = Plaintext()
-    decryptor.decrypt(encrypted_sum, decrypted_sum)
-    sum_result = batch_encoder.decode(decrypted_sum)
-
-    decrypted_product = Plaintext()
-    decryptor.decrypt(encrypted_product, decrypted_product)
-    product_result = batch_encoder.decode(decrypted_product)
-
-    print('Matrix 1:')
-    print_vector(matrix1)
-
-    print('Matrix 2:')
-    print_vector(matrix2)
-
-    print('Encrypted Sum:')
-    print_vector(sum_result)
-
-    print('Encrypted Product:')
-    print_vector(product_result)
+def convert_numbers_to_message(numbers):
+    # Convert numerical representation back to string message
+    return ''.join(chr(number) for number in numbers)
 
 
 if __name__ == "__main__":
-    homomorphic_operations()
+    custom_homomorphic_operations()
