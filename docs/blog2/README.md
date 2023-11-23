@@ -84,9 +84,11 @@ Test the installation: <br>
 •	First we will need to copy the ‘seal.*.so’ file to the example directory 
 <br>
  ![test1](assets/test-install-1.png)
+<br>
 •	Run the ‘4_bgv_basics.py’ file to test the functionality of the library. 
 <br>
  ![test2](assets/test-install-2.png)
+<br>
 •	If all is working correctly the output should look like this:
 <br>
  ![test3](assets/test-install-3.png)
