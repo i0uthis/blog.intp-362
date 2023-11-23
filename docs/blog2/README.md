@@ -39,7 +39,7 @@ HElib [], which stands for “Homomorphic Encryption Library” is an encryption
 
 PySEAL [] is a Python wrapper around Microsoft’s SEAL library, it is designed to facilitate homomorphic encryption in Python-based environments. This makes it convenient for Python developers to work with homomorphic encryption without need to interface with the C++ implementation directly. PySEAL serves as a bridge between the powerful encryption library of SEAL and the Python Environment, allowing for a more accessible and user-friendly way to perform computations on encrypted data for Python developers.
 <br/><br/>
-![lock](asset/lock.png)
+![lock](assets/lock.png)
 <br/><br/>
 ## Demonstration on SEAL-Python []
 The PySEAL repository in GitHub unfortunately is only a proof of concept however I found another repository made by a GitHub user called “Huelse” [] called SEAL-Python. The repository has a guide on how to setup SEAL-python in Linux and Windows environments.
