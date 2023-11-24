@@ -264,7 +264,7 @@ https://github.com/Lab41/PySEAL (accessed Nov. 15, 2023)
 <br/><br/>
 [12] S. Rogers, “PySEAL: Homomorphic encryption in a user-friendly Python package,” BioQuest, May 23, 2018. https://medium.com/bioquest/pyseal-homomorphic-encryption-in-a-user-friendly-python-package-51dd6cb0411c (accessed Nov. 19, 2023)
 
-<br\><br\>
+<br/><br/>
 
 <script src="https://utteranc.es/client.js" repo="i0uthis/blog.intp-362" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async> </script>
 
