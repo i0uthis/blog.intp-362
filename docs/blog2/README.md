@@ -44,7 +44,6 @@ The PySEAL repository in GitHub unfortunately is only a proof of concept however
 <br/><br/>
 
 ### Installing Prerequisites:
-<br/><br/>
 •	SEAL-python requires a couple of packages that need install. To install them use the following commands: <br>
 “sudo apt-get install git build-essential cmake python3 python3-dev python3-pip”
 <br/><br/>
@@ -52,7 +51,6 @@ The PySEAL repository in GitHub unfortunately is only a proof of concept however
 <br/><br/>
 
 ### Clone SEAL-Python:
-<br/><br/>
 •	Clone the SEAL-Python library using the git command from GitHub
 •	If you would want to have the repository cloned to a different place move to it before executing the following commands: <br>
 “git clone https://github.com/Huelse/SEAL-Python.git” <br>
@@ -66,7 +64,6 @@ The PySEAL repository in GitHub unfortunately is only a proof of concept however
 <br/><br/>
 
 ### Install dependencies: 
-<br/><br/>
 •	Use the pip command to install required dependencies for SEAL-Python <br>
 “pip3 install numpy pybind11”
 <br/><br/>
@@ -74,7 +71,6 @@ The PySEAL repository in GitHub unfortunately is only a proof of concept however
 <br/><br/>
 
 ### Initialize SEAL and pybind11: 
-<br/><br/>
 •	Update and initialize the submodules needed by the SEAL-Python library using the “git submodule” command: <br>
 “git submodule update –init –recursive”
 <br/><br/>
@@ -82,7 +78,6 @@ The PySEAL repository in GitHub unfortunately is only a proof of concept however
 <br/><br/>
 
 ### Build the SEAL library: 
-<br/><br/>
 •	In the SEAL-Python directory navigate to the ‘SEAL’ directory
 •	In the directory use the cmake command to configure the SEAL library <br>
 “cmake -S . -B build -DSEAL_USE_MSGSL=OFF -DSEAL_USE_ZLIB=OFF”
@@ -96,7 +91,6 @@ The PySEAL repository in GitHub unfortunately is only a proof of concept however
 <br/><br/>
 
 ### Running the Setup: 
-<br/><br/>
 •	After the SEAL library is successfully built, return to the root directory of SEAL-Python and run the setup.py file to build and install the necessary extensions. <br>
 “python3 setup.py build_ext -I”
 <br/><br/>
@@ -104,7 +98,6 @@ The PySEAL repository in GitHub unfortunately is only a proof of concept however
 <br/><br/>
 
 ### Test the installation: 
-<br/><br/>
 •	If everything has been setup correctly, SEAL-Python should be ready to use. But before that we will need to test and see.
 •	First we will need to copy the ‘seal.*.so’ file to the example directory 
 <br/><br/>
@@ -121,7 +114,6 @@ The PySEAL repository in GitHub unfortunately is only a proof of concept however
 Now we have installed SEAL-Python. Next I will be demonstrating using my own python code based on the SEAL-Python library to demonstrate some basic operations using the BGV scheme. This code will include the setting up of encryption parameters, key generation, encryption and decryption, batch encoding, homomorphic operations, modulus switching and printing the results of each operation.
 
 ## SEAL-Python code: 
-<br/><br/>
 ***Disclaimer: This code does not represent Homomorphic encryption in a real world setting as it does the encryption and decryption in one script*** <br>
 The code below will demonstrate the basic usage of SEAL library for homomorphic encryption: <br>
 ```
@@ -206,18 +198,14 @@ This code demonstrates the encryption and decryption process for a concatenated 
 <br/><br/>
 
 ### Output of Code:
-<br/><br/>
-
 ![output](assets/code-output.png)
 <br/><br/>
 
 ### Plaintext matrix: 
-<br/><br/>
 The output of this shows the plaintext matrix size which refers to the number of slots required for encoding a message. If we consider my example my message contains four lines of strings that have varying number of characters. Each of those characters would require their own slot in the plaintext matrix but the exact number of slots needed may vary depending on the encoding scheme used to pack characters into the slots. In my code, I am using a batch encoding scheme which allows for multiple characters to be packed into a single slot, reducing the total number of slots needed.
 <br/><br/>
 
 ### Encryption and Decryption: 
-<br/><br/>
 As you can see the output of my code shows the original message as it was typed in a dictionary and the decrypted message shown as a string printed with a print statement. Unfortunately, I am unable to show what the encrypted message looks like as SEAL does not allow for such a thing. 
 If you try to print the encrypted message you would likely get something like this: <br>
 ![cipher](assets/print-cipher.png)
@@ -226,21 +214,18 @@ This represents the memory reference or the object itself and not the actual con
 <br/><br/>
 
 ### Noise Budget: 
-<br/><br/>
 ![noise](assets/noise.png)
 <br/><br/>
 As mentioned above the noise or error is introduced during the operation of the encryption. Noise budget is not the same as the Noise Threshold. Noise Budget refers to the amount of noise present in the ciphertext and Noise threshold refers to a predetermined limit that when reach could cause potential issues with the security or accuracy of the encrypted data. The noise budget shows the “health” of the encrypted data, ensuring that the noise doesn’t reach the noise threshold. If the noise budget decreases too much, it may impact the reliability of the decryption process. Having a way to manage the noise budget is crucial to maintaining security and accuracy of the computations in a homomorphic encryption scheme.
 <br/><br/>
 
 ### Ciphertext Size: 
-<br/><br/>
 ![size](assets/cipher-size.png)
 <br/><br/>
 My code’s ciphertext size mean that my ciphertext contains two polynomials which relates to the structure of the BGV scheme my code is using. The scheme involves the handling of multiple polynomials within a single ciphertext for homomorphic operations. Each polynomial in the ciphertext may represent different parts of the encrypted, and the size of the polynomials in the ciphertext can change as operations are performed on it.
 <br/><br/>
 
 ### Encryption Parameters: 
-<br/><br/>
 ![parms](assets/encrypt-param.png)
 <br/><br/>
 These numbers in SEAL refers to the parameters used during the encryption process. Each ID correspond to different aspects of the encryption scheme, aspects like poly modulus degree, coefficient modulus and plain modulus. Poly modulus degree determines the size of the polynomials that the HE scheme deals with, higher degree values will offer stronger security but increases the complexity of the computations. Coefficient modulus directly influences the ciphertext size and noise budget which affects security and precision of the HE computations. Plain modulus determines the size of the plaintext data type and the consumption of noise budget in multiplications, it’s specifically tailored for batching operations. A smaller plain modulus value will provide better efficiency but reduces the amount of data that can be encrypted.
