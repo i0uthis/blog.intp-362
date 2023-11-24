@@ -53,3 +53,11 @@ Continued in [blog2](https://i0uthis.github.io/blog.intp-362/blog2)
 [4] R. Yackel, “What is homomorphic encryption, and why isn’t it mainstream?,” Keyfactor, Jul. 06, 2021. \
 <https://www.keyfactor.com/blog/what-is-homomorphic-encryption/> (accessed Oct 12 2023)
 <br/><br/>
+
+<script src="https://utteranc.es/client.js"
+        repo="https://github.com/i0uthis/blog.intp-362"
+        issue-term="pathname"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
