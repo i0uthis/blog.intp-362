@@ -4,7 +4,7 @@
 ![Homomorphic Encryption](assets/Homo-Encryption-Feature.png)
 \
 <br/><br/>
-This blog is a continuation of “Homomorphic Encryption: The Power of Secure Data Processing” by John Narte [1]. In this blog we will delve deeper into the fundamentals of homomorphic encryption, followed by a brief overview of some open-source homomorphic encryption libraries currently available, and concludes with a tutorial on how to use one such libraries namely SEAL.
+This blog is a continuation of “[Homomorphic Encryption: The Power of Secure Data Processing](https://i0uthis.github.io/blog.intp-362/)” by John Narte [1]. In this blog we will delve deeper into the fundamentals of homomorphic encryption, followed by a brief overview of some open-source homomorphic encryption libraries currently available, and concludes with a tutorial on how to use one such libraries namely SEAL.
 <br/><br/>
 ## A brief into homomorphic encryption
 A popular example of the use of homomorphic encryption is where a data owner wants to send data to a cloud-based service for processing, but they do not trust the service provider with their data. With a homomorphic encryption scheme, the data owner can encrypt their data and sends it to the cloud server. The server will perform the relevant computations against the data without ever needing the decryption key and sends back the encrypted results to the data owner. The data owner is then able to read the results because only they have the decryption key. This method of encryption retains the confidentiality of the encrypted data because only one person knows the key to unlocking it.[2]
