@@ -256,5 +256,7 @@ https://github.com/Huelse <br>
 https://geekflare.com/lattice-based-cryptography/ <br>
 https://github.com/OpenMined/TenSEAL/blob/main/tutorials%2FTutorial%202%20-%20Working%20with%20Approximate%20Numbers.ipynb <br>
 https://github.com/microsoft/SEAL/blob/main/native/examples/1_bfv_basics.cpp
+<br\><br\>
 
+<script src="https://utteranc.es/client.js" repo="i0uthis/blog.intp-362" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async> </script>
 
